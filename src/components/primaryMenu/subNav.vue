@@ -25,7 +25,7 @@ export default {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
   border-radius: 0 0 4px 4px;
-  z-index: 2;
+  z-index: 200;
   overflow: hidden;
 }
 li {

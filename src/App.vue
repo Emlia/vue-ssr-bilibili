@@ -1,31 +1,20 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
+    <router-link to="/">Goto Index</router-link>
     <router-link to="/bar">Goto Bar</router-link>
     <router-link to="/home">Goto home</router-link>
     <router-view/>
-    <!-- <home></home>
-    <Bar/>
-    <div @click="handleMsg">{{msg}}</div>-->
   </div>
 </template>
 
 <script>
-// import home from "./page/home.vue";
-// import Bar from "./components/bar.vue";
+import api from "./api";
 export default {
   name: "App",
-  // components: { home, Bar },
   data() {
-    return {
-      msg: "this is msg"
-    };
+    return {};
   },
-  methods: {
-    handleMsg() {
-      console.log("msg");
-    }
-  },
+  methods: {},
   beforeRouteEnter(to, from, next) {
     console.log("todo before enter", this);
     next(vm => {
@@ -54,6 +43,7 @@ export default {
 
   mounted() {
     console.log("App.vue mounted");
+    api.getBilibiliIndex();
   }
 };
 </script>

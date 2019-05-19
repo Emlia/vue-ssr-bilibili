@@ -42,6 +42,7 @@ export default {
 .tab {
   display: inline-block;
   margin-left: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
   &.active {
     border-bottom: 2px solid #00a1d6;

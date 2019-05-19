@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ListItem v-for="item in list" :key="item.id" :item="item"></ListItem>
+    <ListItem class="list-item" v-for="item in list" :key="item.id" :item="item"></ListItem>
   </div>
 </template>
 
@@ -15,22 +15,27 @@ export default {
         {
           id: 1,
           img: require("./small.jpg"),
-          text: "这动画也太劲爆了吧！2019四月新番吐槽大盘点！（第一弹）"
+          text: "111这动画也太劲爆了吧！2019四月新番吐槽大盘点！（第一弹）"
         },
         {
           id: 2,
           img: require("./small.jpg"),
-          text: "这动画也太劲爆了吧！2019四月新番吐槽大盘点！（第一弹）"
+          text: "222这动画也太劲爆了吧！2019四月新番吐槽大盘点！（第一弹）"
         },
         {
           id: 3,
           img: require("./small.jpg"),
-          text: "这动画也太劲爆了吧！2019四月新番吐槽大盘点！（第一弹）"
+          text: "333这动画也太劲爆了吧！2019四月新番吐槽大盘点！（第一弹）"
         },
         {
           id: 4,
           img: require("./small.jpg"),
-          text: "这动画也太劲爆了吧！2019四月新番吐槽大盘点！（第一弹）"
+          text: "444这动画也太劲爆了吧！2019四月新番吐槽大盘点！（第一弹）"
+        },
+        {
+          id: 5,
+          img: require("./small.jpg"),
+          text: "55这动画也太劲爆了吧！2019四月新番吐槽大盘点！（第一弹）"
         }
       ]
     };

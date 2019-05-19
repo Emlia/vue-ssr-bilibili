@@ -27,9 +27,12 @@
           <li class="nav-item">
             <a href="#" title="漫画">漫画</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" @mouseenter="show=true" @mouseleave="show=false">
             <bIcon></bIcon>
             <a href="#" title="下载APP">下载APP</a>
+            <div v-show="show" class="next-content">
+              <div class="box"></div>
+            </div>
           </li>
         </ul>
       </div>
@@ -71,21 +74,23 @@
 </template>
 
 <script>
-import bIcon from '../icon';
-import bFace from '../face';
-import bInput from '../input';
-import bButton from '../button';
+import bIcon from "../icon";
+import bFace from "../face";
+import bInput from "../input";
+import bButton from "../button";
 
 export default {
-  name: 'bNav',
+  name: "bNav",
   components: { bIcon, bFace, bInput, bButton },
   data() {
-    return {};
-  },
+    return {
+      show: false
+    };
+  }
 };
 </script>
 
-<style  scoped>
+<style lang="less"  scoped>
 .nav {
   width: 100%;
   min-width: 980px;
@@ -114,9 +119,6 @@ export default {
   clear: both;
 }
 
-.nav-con {
-  /* margin: 8px; */
-}
 .float-left {
   float: left;
   margin-left: 60px;
@@ -168,7 +170,22 @@ export default {
 .search::after {
   clear: both;
 }
-.searchform {
-  /* background-color: rgba(0, 0, 0, 0.12); */
+.next-content {
+  position: absolute;
+  margin-left: -28px;
+  width: 259px;
+  height: 174px;
+  background: url(./orcode-frame.png);
+  z-index: 300;
+}
+.box:before {
+  content: "";
+  position: absolute;
+  z-index: 400;
+  width: 97px;
+  height: 97px;
+  left: 82px;
+  top: 30px;
+  background: url(./orcode.png);
 }
 </style>
